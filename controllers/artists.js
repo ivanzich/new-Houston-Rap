@@ -14,7 +14,9 @@ var artistsController = {
   },
   show: function(req, res) {
       var id = req.params.id;
-      Artist.find({_id: id}, function(err, artist) {
+      Artist.findById({_id: id}, function(err, artist) {
+        console.log("show page is working")
+        console.log(artist);
       err ? res.redirect('/artists') : res.render('artists/show', {artist: artist})
       })
   },
@@ -22,6 +24,12 @@ var artistsController = {
 
   },
   delete: function(req, res) {
+
+  },
+  api: function(req, res) {
+    Artist.find({}, function(err, artist) {
+      res.json(artist)
+    })
 
   }
 };
