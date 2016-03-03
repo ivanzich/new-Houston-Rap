@@ -18,7 +18,7 @@ var port = 3000;
 
 //Routes
 var routes = require('./config/routes');
-// app.use(routes);
+app.use(routes);
 
 
 app.listen(port, function() {
