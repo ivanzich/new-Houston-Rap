@@ -14,5 +14,7 @@ router.route('/artists/:id')
       .get(artistsController.show)
       .patch(artistsController.update)
       .delete(artistsController.delete);
+router.route('/api')
+      .get(artistsController.api);
 
 module.exports = router;
