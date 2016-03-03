@@ -4,6 +4,7 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var hbs = require('hbs');
 
 //Configurations
 mongoose.connect("mongodb://localhost/artists");
@@ -17,7 +18,7 @@ var port = 3000;
 
 //Routes
 var routes = require('./config/routes');
-app.use(routes);
+// app.use(routes);
 
 
 app.listen(port, function() {
