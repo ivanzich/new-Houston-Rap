@@ -2,13 +2,13 @@ var Artist = require('../models/Artist')
 
 var artistsController = {
   index: function(req, res) {
-      res.render('artists/index', {artists:artists});
+      res.render('artists');
   },
   create: function(req, res) {
 
   },
   new: function(req, res) {
-
+      res.render('artists/new');
   },
   show: function(req, res) {
 
