@@ -2,7 +2,9 @@ var Artist = require('../models/Artist')
 
 var artistsController = {
   index: function(req, res) {
-      res.render('artists', {artists:artists});
+      Artist.find({}, function(err, artists) {
+        res.render('artists', {artists:artists});
+      })
   },
   create: function(req, res) {
       Artist.create()
