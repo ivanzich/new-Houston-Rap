@@ -5,6 +5,14 @@ var express = require('express'),
 
 var artistsController = require('../controllers/artists');
 
-router.route('/artists');
+router.route('/artists')
+      .get(artistsController.index)
+      .post(artistsController.create);
+router.route('/artists/new')
+      .get(artistsController.new);
+router.route('/artists/:id')
+      .get(artistsController.show)
+      .patch(artistsController.update)
+      .delete(artistsController.delete);
 
 module.exports = router;
