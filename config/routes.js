@@ -19,5 +19,8 @@ router.route('/', function(req, res) {
 })
 router.route('/api')
       .get(artistsController.api);
+router.route('/', function(req, res) {
+      res.redirect('/artists');
+})
 
 module.exports = router;
