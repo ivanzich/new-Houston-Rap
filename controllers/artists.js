@@ -24,9 +24,60 @@ var artistsController = {
       })
   },
   update: function(req, res) {
+    var id = req.params.id;
+    Artist.findById({_id: id}, function(err, artist){
+      if(err) {
+        res.json(err);
+      }
+    
+      if (req.body.name) { 
+         artist.name = req.body.name;
 
-  },
+      }
+      if (req.body.album) {
+          artist.album = req.body.album;
+      }
+
+      if (req.body.bio) {
+          artist.bio = req.body.bio;
+      }
+
+      if (req.body.photo_url) {
+          artist.photo_url = req.body.photo_url;
+      }
+          
+          artist.save(function(err)  { 
+            if(err) { res.json(err);
+            }
+
+
+            res.redirect('/artists/show');
+
+          });
+      
+              
+        });
+
+    },
+
+
+
+  
   delete: function(req, res) {
+    var_id = req.params.id;
+
+    Artist.remove ({_id: id}, function(err) {
+       if(err)  res.json({message: "Could not delete artist:  "+ err});
+
+       res.json({message: "Artist succesfully deleted"});
+
+
+     });
+
+
+  
+
+
 
   },
   api: function(req, res) {
