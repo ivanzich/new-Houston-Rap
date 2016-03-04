@@ -30,7 +30,6 @@ var artistsController = {
     Artist.find({}, function(err, artist) {
       res.json(artist)
     })
-
   }
 };
 
