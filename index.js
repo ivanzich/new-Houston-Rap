@@ -20,6 +20,9 @@ var port = 3000;
 var routes = require('./config/routes');
 app.use(routes);
 
+app.get('/', function(req, res) {
+      res.redirect('/artists');
+});
 
 app.listen(port, function() {
   console.log("Listening on port: " + port);
