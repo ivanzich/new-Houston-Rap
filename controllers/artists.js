@@ -84,9 +84,7 @@ var artistsController = {
     Artist.find({}, function(err, artist) {
       res.json(artist)
     })
-
   }
 };
 
 module.exports = artistsController;
-// module.exports = albumsController;

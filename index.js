@@ -7,7 +7,7 @@ var methodOverride = require('method-override');
 var hbs = require('hbs');
 
 //Configurations
-mongoose.connect("mongodb://localhost/artists");
+mongoose.connect("mongodb://localhost:27017/artists");
 process.on('exit', function() { mongoose.disconnect()}); //Shutdown mongoose correctly
 app.set('view engine', 'hbs'); //sets view engine to handle bars
 app.use(bodyParser.json());
