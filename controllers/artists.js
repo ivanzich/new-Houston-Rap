@@ -38,4 +38,3 @@ var artistsController = {
 };
 
 module.exports = artistsController;
-// module.exports = albumsController;
