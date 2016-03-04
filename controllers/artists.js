@@ -6,11 +6,14 @@ var artistsController = {
         res.render('artists', {artists:artists});
       })
   },
-  create: function(req, res) {
-      Artist.create()
-  },
   new: function(req, res) {
       res.render('artists/new');
+  },
+  create: function(req, res) {
+      var artistparams = req.body
+      Artist.create(artistparams, function(err, artist){
+        err ? res.redirect('/artist/new') : res.render('artists/show', {artist: artist})
+      });
   },
   show: function(req, res) {
       var id = req.params.id;
@@ -35,3 +38,4 @@ var artistsController = {
 };
 
 module.exports = artistsController;
+// module.exports = albumsController;
