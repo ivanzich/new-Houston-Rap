@@ -4,8 +4,7 @@ var mongoose = require('mongoose');
 
 var ArtistSchema = new mongoose.Schema({
     name: String,
-    hitSong: String,
-    album: String,
+    albums: [albumSchema],
     bio: String,
     photo_url: String,
     createdAt: {type: Date, default: new Date()}
