@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+<div class="container-fluid">
+      <ul>
+        {{#each artists}}
+        <ul class="thumblist">
+          <li><img src="{{photo_url}}"/></li>
+        </ul>
+        {{/each}}
+      </ul>
+</div>
+||||||| merged common ancestors
+<ul>
+{{#each artists}}
+  <li class="artists">
+    <a class="artist-name" href="/artists/{{_id}}">{{name}}:</a>
+  </li>
+  <li class="artists">{{hitSong}}</li>
+  <li class="artists">{{album}}</li>
+  <li class="artists">{{bio}}</li>
+  <img class="artists-pic" src={{photo_url}}>
+{{/each}}
+</ul>
+=======
 <ul>
 {{#each artists}}
   <li class="artists">
@@ -6,3 +29,4 @@
   <img class="artists-pic" src={{photo_url}}>
 {{/each}}
 </ul>
+>>>>>>> master
