@@ -14,9 +14,6 @@ router.route('/artists/:id')
       .get(artistsController.show)
       .patch(artistsController.update)
       .delete(artistsController.delete);
-router.route('/', function(req, res) {
-      res.redirect('/artists');
-})
 router.route('/api')
       .get(artistsController.api);
 router.route('/', function(req, res) {
