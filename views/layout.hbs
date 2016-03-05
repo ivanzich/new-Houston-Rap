@@ -8,7 +8,7 @@
 
     <div class='navbar navbar-inverse navbar-fixed-top'>
           <div class='container'>
-                  <a href='/artists' class='navbar-brand'>Throwing Sheade</a>
+                  <a href='/artists' class='navbar-brand sheade'>Throwing Sheade</a>
                   <button class = 'navbar-toggle' data-toggle = 'collapse' data-target= '.navHeaderCollapse'>
                       <span class = 'icon-bar'></span>
                       <span class = 'icon-bar'></span>
@@ -17,7 +17,7 @@
                   <div class = 'collapse navbar-collapse navHeaderCollapse'>
                       <div id="myScrollspy">
                               <ul class = 'nav navbar-nav navbar-right'>
-                                      <li><a href='/artists/new'>Add New Artist</a></li>
+                                      <li><a href='#artists'>Artist</a></li>
                               </ul>
                       </div>
                   </div>
@@ -28,10 +28,10 @@
         <h1 class="logo">Throwing Sheade</h1>
       </header>
 
-    <hr>
-
+<a name="artists" class='content-body'>
       {{{body}}}
-
+    </a>
+      <script src="https://code.jquery.com/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </body>
 </html>
