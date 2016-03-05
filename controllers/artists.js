@@ -23,20 +23,26 @@ var artistsController = {
       err ? res.redirect('/artists') : res.render('artists/show', {artist: artist})
       })
   },
+  edit: function(req, res) {
+      var id = req.params.id;
+      Artist.findById({_id: id}, function(err, artist) {
+        res.render('artists/edit', {artist: artist});
+      })
+  },
   update: function(req, res) {
     var id = req.params.id;
     Artist.findById({_id: id}, function(err, artist){
-      if(err) {
-        res.json(err);
-      }
-    
-      if (req.body.name) { 
+      // if(err) {
+      //   res.json(err);
+      // }
+
+      if (req.body.name) {
          artist.name = req.body.name;
 
       }
-      if (req.body.album) {
-          artist.album = req.body.album;
-      }
+      // if (req.body.album) {
+      //     artist.album = req.body.album;
+      // }
 
       if (req.body.bio) {
           artist.bio = req.body.bio;
@@ -45,8 +51,8 @@ var artistsController = {
       if (req.body.photo_url) {
           artist.photo_url = req.body.photo_url;
       }
-          
-          artist.save(function(err)  { 
+
+          artist.save(function(err)  {
             if(err) { res.json(err);
             }
 
@@ -54,15 +60,15 @@ var artistsController = {
             res.redirect('/artists/show');
 
           });
-      
-              
+
+
         });
 
     },
 
 
 
-  
+
   delete: function(req, res) {
     var_id = req.params.id;
 
@@ -75,7 +81,7 @@ var artistsController = {
      });
 
 
-  
+
 
 
 

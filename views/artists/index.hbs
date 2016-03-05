@@ -1,10 +1,11 @@
 
 <div class="container-fluid">
-      <ul>
+
         {{#each artists}}
-        <ul class="thumblist">
-          <li><img src="{{photo_url}}"/></li>
-        </ul>
+        <div class="thumblist">
+          <a href="/artists/{{_id}}">{{name}}</a>
+          <img src="{{photo_url}}"/>
+        </div>
         {{/each}}
-      </ul>
+
 </div>
