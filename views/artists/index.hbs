@@ -1,12 +1,12 @@
 
+
 <div class="container-fluid" name="artists">
-      <ul>
         {{#each artists}}
         <ul class="thumblist">
           <a href="/artists/{{_id}}"><li><img src="{{photo_url}}"/></li></a>
         </ul>
         {{/each}}
-      </ul>
+
 </div>
 <div class="add-artist-button">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new-artist-modal">
