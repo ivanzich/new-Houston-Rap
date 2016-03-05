@@ -12,8 +12,11 @@ router.route('/artists/new')
       .get(artistsController.new);
 router.route('/artists/:id')
       .get(artistsController.show)
-      .patch(artistsController.update)
-      .delete(artistsController.delete);
+      .delete(artistsController.delete)
+      .put(artistsController.update);
+router.route('/artists/:id/edit')
+      .get(artistsController.edit);
+
 router.route('/api')
       .get(artistsController.api);
 
