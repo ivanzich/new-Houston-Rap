@@ -34,13 +34,13 @@
 
 .thumblist li {
     float: left;
-    height: 200px;
     width: 200px;
     margin: 5px;
     overflow: hidden;
 }
 
 .thumblist img {
+    height: 200px;
     display: block;
     -ms-interpolation-mode: bicubic; /* Better image scaling in IE */
 }
