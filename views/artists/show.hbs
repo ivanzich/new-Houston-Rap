@@ -1,8 +1,53 @@
+<div class="container-fluid">
 
 <h3 class="artist-name">{{artist.name}}</h3>
 
-<a href="/artists/{{artist._id}}/edit">Edit Artist Info</a>
+<div class="container">
 
-<img class="artist-pic" src={{artist.photo_url}}>
-<div class="artist">Artist Bio:</div>
-<div class="artist">{{artist.bio}}</div>
+  <div class="row">
+    <div class="col-med-4">
+      <ul class="thumblist">
+        <li><img src="{{artist.photo_url}}"/></li>
+      </ul>
+    </div>
+    <div class="col-med-8">
+      <div class="artist">Artist Bio:</div>
+      <div class="artist">{{artist.bio}}</div>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#edit-artist-modal">Edit</button>
+    </div>
+  </div>
+</div>
+
+<!-- <img class="artist-pic thumblist" src={{artist.photo_url}}> -->
+
+</div>
+<!-- Form to Edit  Artists-------------------------------------------------->
+<div class="modal fade" id = "edit-artist-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="container-fluid">
+              <form action="/artists/:id" method="put" class="form-group">
+                <label for="artist-name">Artist's Name: </label>
+                <input id="artist-name" type="text" name="name" class="form-control" value={{artist.name}}>
+                <label for="artist-bio">Artist's Bio: </label>
+                <input id="artist-bio" type="text" name="bio" class="form-control" value={{artist.bio}}>
+                <label for="artist-photo_url">New Picture: </label>
+                <input id="artist-photo_url" type="text" name="photo_url" class="form-control" value={{artist.photo_url}}>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <input type="submit" class="btn btn-success">
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Form to Edit  Artists-------------------------------------------------->
