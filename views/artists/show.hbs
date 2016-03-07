@@ -12,7 +12,15 @@
       <div class="artist">{{artist.bio}}</div>
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#edit-artist-modal">Edit</button>
 
+      <div>
+        {{#each artist.albums}}
+        <div>{{name}}</div>
+        <ul class="thumblist">
+          <li><img src={{albumCover}}></li>
+        </ul>
+        {{/each}}
 
+      </div>
 
 
 </div>
@@ -46,20 +54,3 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!-- Form to Edit  Artists-------------------------------------------------->
-
-<img class="artist-pic" src={{artist.photo_url}}>
-<div class="artist">Artist Bio:</div>
-<div class="artist">{{artist.bio}}</div>
-
-<img class="artist-pic" src={{artist.photo_url}}>
-<div class="artist">Artist Bio:</div>
-<div class="artist">{{artist.bio}}</div>
-<div class="artist">
-
-<div>
-  {{#each artist.albums}}
-  <div>{{name}}</div>
-  <img src={{albumCover}}>
-  {{/each}}
-
-</div>
