@@ -1,30 +1,36 @@
 <div class="container-fluid">
 
-<h3 class="artist-name">{{artist.name}}</h3>
+<h1 class="artist-name">{{artist.name}}</h1>
 
-
-<a href="/artists/{{artist._id}}/newalbum">Add new Album</a>
-
-      <ul class="thumblist">
-        <li><img src="{{artist.photo_url}}"/></li>
-      </ul>
-      <div class="artist">Artist Bio:</div>
-      <div class="artist">{{artist.bio}}</div>
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#edit-artist-modal">Edit</button>
-
-      <div>
+      <div class="row row-centered">
+          <div class="col-lg-3" >
+            <ul class="thumblist col-centered">
+              <li><img src="{{artist.photo_url}}"/></li>
+            </ul>
+          </div>
+          <div class="col-lg-8">
+            <div class="artist-bio-label">Artist Bio:</div>
+            <div class="artist-bio">{{artist.bio}}</div>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#edit-artist-modal">Edit</button>
+            <a href="/artists/{{artist._id}}/newalbum" class='btn btn-success'>Add new Album</a>
+          </div>
+      </div>
+      <div class="row row-centered">
         {{#each artist.albums}}
-        <div>{{name}}</div>
-        <ul class="thumblist">
-          <li><img src={{albumCover}}></li>
-        </ul>
-        {{/each}}
-
+          <div class="col-lg-3">
+            <ul class="thumblist col-centered">
+              <li><img src="{{albumCover}}"></li>
+            </ul>
+          </div>
+          {{/each}}
       </div>
 
 
+
+
+
 </div>
-<!-- Form to Edit  Artists-------------------------------------------------->
+<!---Form to Edit  Artists-------------------------------------------------->
 <div class="modal fade" id = "edit-artist-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
