@@ -42,11 +42,11 @@
 
         <div class="container-fluid">
               <form action="/artists/{{artist._id}}?_method=PUT" method="POST" class="form-group">
-                <label for="artist-name">Artist's Name: </label>
+                <label for="artist-name" class='labels'>Artist's Name: </label>
                 <input id="artist-name" type="text" name="name" class="form-control" value={{artist.name}}>
-                <label for="artist-bio">Artist's Bio: </label>
+                <label for="artist-bio" class='labels'>Artist's Bio: </label>
                 <input id="artist-bio" type="text" name="bio" class="form-control" value={{artist.bio}}>
-                <label for="artist-photo_url">New Picture: </label>
+                <label for="artist-photo_url" class='labels'>New Picture: </label>
                 <input id="artist-photo_url" type="text" name="photo_url" class="form-control" value={{artist.photo_url}}>
         </div>
 
