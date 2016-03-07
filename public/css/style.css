@@ -1,21 +1,38 @@
+body {
+  background: black;
+  font-family: Kanit;
+}
 /*******************NAV****************************************************/
 .sheade {
     font-size: 20px;
+    color: white !important;
+}
+.sheade:hover {
     color: red !important;
+}
+.navbar {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .2));
+  /*border-bottom: 1px solid gray;*/
+}
+a.nav-button {
+  color: rgba(184, 115, 51, .9);
+  font-size: 20px;
+}
+a.nav-button:hover {
+  color: white;
+  background: none !important;
 }
 /*******************NAV****************************************************/
 /*******************Hero/Logo****************************************************/
 .hero {
     width: 100%;
-    height: 46em;
+    height: 50em;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0 ,0, 0, .5)), url('http://p1.pichost.me/i/12/1346593.jpg');
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0 ,0, 0, .2)), url('https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?crop=entropy&dpr=2&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1275');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 3em;
-    background-attachment: fixed;
-    background-blend-mode: hard-light;  
 }
 .logo {
     width: 100%;
@@ -24,13 +41,29 @@
     text-align: center;
     position: relative;
     top: 50%;
+    letter-spacing: 5px;
     transform: translateY(-50%);
     text-shadow: 0px 0px 50px black;
     font-family: Patua One;
 }
-.affix {
-    top: 0;
+
+#gangsta-quote {
+    font-family: Kanit;
+    font-size: 30px;
+    color: white;
     width: 100%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0px 0px 50px black;
+}
+#gangsta {
+  font-family: Niconne;
+  font-size: 45px;
+  letter-spacing: 10px;
+  color: rgba(184, 115, 51, .9);
+  /*text-shadow: 0px 0px 20px white;*/
 }
 /*******************Hero/Logo****************************************************/
 
