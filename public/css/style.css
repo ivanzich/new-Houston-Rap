@@ -3,6 +3,9 @@ body {
   font-family: Kanit;
   color: white;
 }
+h4, p {
+  text-align: center;
+}
 /*******************NAV****************************************************/
 .sheade {
     font-size: 20px;
