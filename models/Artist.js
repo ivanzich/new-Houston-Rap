@@ -13,7 +13,7 @@ var AlbumSchema = new Schema({
 
 var ArtistSchema = new Schema({
     name: String,
-    Album: [AlbumSchema],
+    albums: [AlbumSchema],
     bio: String,
     photo_url: String,
     createdAt: {type: Date, default: new Date()}

@@ -19,5 +19,7 @@ router.route('/artists/:id/edit')
 
 router.route('/api')
       .get(artistsController.api);
+router.route('/api/albums')
+      .get(artistsController.albumApi);
 
 module.exports = router;
