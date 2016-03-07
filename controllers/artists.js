@@ -18,8 +18,6 @@ var artistsController = {
   show: function(req, res) {
       var id = req.params.id;
       Artist.findById({_id: id}, function(err, artist) {
-        console.log("show page is working")
-        console.log(artist);
       err ? res.redirect('/artists') : res.render('artists/show', {artist: artist})
       })
   },
@@ -52,7 +50,7 @@ var artistsController = {
           artist.photo_url = req.body.photo_url;
       }
 
-          artist.save(function(err)  {
+          artist.save(function(err, artist)  {
             if(err) { res.json(err);
             }
 

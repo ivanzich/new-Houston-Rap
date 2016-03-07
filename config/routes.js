@@ -4,19 +4,24 @@ var express = require('express'),
     methodOverride = require('method-override');
 
 var artistsController = require('../controllers/artists');
+var albumsController = require('../controllers/albums');
 
 router.route('/artists')
       .get(artistsController.index)
-      .post(artistsController.create);
+      .post(artistsController.create)
+      .delete(artistsController.delete);
 router.route('/artists/new')
       .get(artistsController.new);
 router.route('/artists/:id')
       .get(artistsController.show)
-      .delete(artistsController.delete)
-      .put(artistsController.update);
+      .put(artistsController.update)
+      .post(albumsController.create);
+      // .put(albumsController.update)
+      // .delete(albumsController.delete);
 router.route('/artists/:id/edit')
       .get(artistsController.edit);
-
+router.route('/artists/:id/newalbum')
+      .get(albumsController.new);
 router.route('/api')
       .get(artistsController.api);
 
