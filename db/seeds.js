@@ -44,14 +44,6 @@ var artists = [
   {
       name: "Kanye West",
 
-      albums: [{ name: "Yeezus",
-
-        yearReleased: "2013",
-
-        songCount: 10
-
-    }],
-
       bio: "Kanye Omari West is an American hip hop recording artist, songwriter, record producer, fashion designer, and entrepreneur.",
 
       photo_url: "http://a.abcnews.go.com/images/Entertainment/rtr_kanye_west_jc_150407_16x9_992.jpg"

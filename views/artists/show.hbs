@@ -7,13 +7,12 @@
 <img class="artist-pic" src={{artist.photo_url}}>
 <div class="artist">Artist Bio:</div>
 <div class="artist">{{artist.bio}}</div>
-<div class="artist">{{#each artist.albums}}
-  <div class="thumblist">
-    <div>{{name}}</div>
-    <img src={{albumCover}}>
-  </div>
+<div class="artist">
+
+<div>
+  {{#each artist.albums}}
+  <div>{{name}}</div>
+  <img src={{albumCover}}>
   {{/each}}
-
-
 
 </div>

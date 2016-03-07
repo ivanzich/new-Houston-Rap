@@ -13,28 +13,18 @@ var albumsController = {
     },
     create: function (req, res) {
       var albumbody = req.body;
-      var albumname = req.body.name;
-      var albumcover = req.body.albumcover;
-      var albumsongcount = req.body.songCount;
-      var albumyearrelease = req.body.yearReleased;
       var artistid = req.body.artistid;
       Album.create(albumbody, function(err, album){
-          if (err) {
-            console.log("didn't create album");
-            res.redirect('/');
-          }
-          else {
-            console.log(album);
-            Artist.findById({_id: artistid}, function(err, artist){
-              err ? console.log("didn't work") : artist.albums.push(album);
-              res.redirect('/artists/artistid');
+          Artist.findById({_id: artistid}, function(err, artist){
+                console.log(album);
+                console.log(artist);
+                artist.albums.push(album);
+                artist.save();
+                res.redirect('/');
+                console.log(artist.albums);
+              });
             });
-
-          }
-
-      });
-
-    },
+          },
     edit: function (req, res) {
 
     },
