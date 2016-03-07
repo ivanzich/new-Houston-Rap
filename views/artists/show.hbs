@@ -3,6 +3,8 @@
 <h3 class="artist-name">{{artist.name}}</h3>
 
 
+<a href="/artists/{{artist._id}}/newalbum">Add new Album</a>
+
       <ul class="thumblist">
         <li><img src="{{artist.photo_url}}"/></li>
       </ul>
@@ -44,3 +46,20 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!-- Form to Edit  Artists-------------------------------------------------->
+
+<img class="artist-pic" src={{artist.photo_url}}>
+<div class="artist">Artist Bio:</div>
+<div class="artist">{{artist.bio}}</div>
+
+<img class="artist-pic" src={{artist.photo_url}}>
+<div class="artist">Artist Bio:</div>
+<div class="artist">{{artist.bio}}</div>
+<div class="artist">
+
+<div>
+  {{#each artist.albums}}
+  <div>{{name}}</div>
+  <img src={{albumCover}}>
+  {{/each}}
+
+</div>

@@ -10,6 +10,7 @@ Artist.remove({}, function(err) {
   }
 });
 
+
 var albums = [
   {
     name: "Chapter 249: 12-16-72",
@@ -25,9 +26,8 @@ var albums = [
     name: "Pimpalation",
     yearReleased: "2006",
     songCount: 16
-  },
+  }
 ]
-
 
 
 
@@ -61,6 +61,13 @@ var artists = [
       bio: "Chad Lamont Butler, better known by his stage name Pimp C, was an American hip hop recording artist and producer. He was best known for his work with Bun B as a founding member of the Underground Kingz.",
 
       photo_url: " http://photon.101medialablimit.netdna-cdn.com/hypebeast.com/image/2015/11/pimp-c-lil-wayne-3-way-freak-001.jpg?w=1024"
+  },
+  {
+      name: "Kanye West",
+
+      bio: "Kanye Omari West is an American hip hop recording artist, songwriter, record producer, fashion designer, and entrepreneur.",
+
+      photo_url: "http://a.abcnews.go.com/images/Entertainment/rtr_kanye_west_jc_150407_16x9_992.jpg"
   }
 
 ];
@@ -76,8 +83,3 @@ artists[2].albums.push(albums[2])
         mongoose.connection.close();
       }
     });
-
-    // Album.create(albums, function(err, album) {
-    //   // err ? console.log("Error:", err) : mongoose.connection.close();
-    //   err ? console.log("Error:", err) : console.log(album);
-    // })

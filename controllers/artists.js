@@ -19,8 +19,6 @@ var artistsController = {
   show: function(req, res) {
       var id = req.params.id;
       Artist.findById({_id: id}, function(err, artist) {
-        console.log("show page is working")
-        console.log(artist);
       err ? res.redirect('/artists') : res.render('artists/show', {artist: artist})
       })
   },
@@ -33,11 +31,19 @@ var artistsController = {
   update: function(req, res) {
     var id = req.params.id;
     Artist.findById({_id: id}, function(err, artist){
-      console.log(artist);
-      if(req.body.name) {artist.name = req.body.name;}
 
-      // artist.bio = req.body.bio;
-      // artist.photo_url = req.body.photo_url;
+      if (req.body.name) {
+         artist.name = req.body.name;
+      }
+
+      if (req.body.bio) {
+          artist.bio = req.body.bio;
+      }
+
+      if (req.body.photo_url) {
+          artist.photo_url = req.body.photo_url;
+      }
+
       artist.save(function(err) {
         err ? console.log("Could not save because:", err) : res.redirect('/artists')
       })
