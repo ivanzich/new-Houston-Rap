@@ -8,7 +8,7 @@ body {
     color: white !important;
 }
 .sheade:hover {
-    color: red !important;
+    color: rgba(184, 115, 51, .9) !important;
 }
 .navbar {
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .2));
@@ -95,5 +95,14 @@ a.nav-button:hover {
     padding: 2em;
     text-align: center;
 }
-
+.artist-square {
+  position: relative;
+  margin-bottom: 1.5em;
+  text-align: center;
+  padding: 50px;
+}
+img {
+  border: 2px solid white;
+  border-radius: 5px;
+}
 /*******************Main Content****************************************************/
